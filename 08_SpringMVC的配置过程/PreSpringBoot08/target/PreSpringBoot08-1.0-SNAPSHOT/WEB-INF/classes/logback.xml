@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="1 seconds">
+
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+
+        <restJUL>true</restJUL>
+
+    </contextListener>
+
+    <jmxConfigurator/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>logback: %d{HH:mm:ss.SSS} %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--将该包下的日志信息设置为debug级别-->
+    <!--能看到更详细是SpringMVC错误-->
+    <logger name="org.springframework.web" level="DEBUG"/>
+
+    <root level="info">
+        <appender-ref ref="console"/>
+    </root>
+</configuration>

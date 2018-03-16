@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.zyf.spring_boot_stater_demo.DemoServiceAutoConfiguration

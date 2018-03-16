@@ -1,0 +1,18 @@
+CREATE TABLE student (
+  id INT NOT NULL PRIMARY KEY,
+  name VARCHAR(50),
+  gender VARCHAR(50)
+);
+
+-- 创建序列
+CREATE SEQUENCE STUDENT_SEQUENCE;
+
+INSERT INTO student VALUES (STUDENT_SEQUENCE.nextval,'学生1','男');
+INSERT INTO student VALUES (STUDENT_SEQUENCE.nextval,'学生2','女');
+INSERT INTO student VALUES (STUDENT_SEQUENCE.nextval,'学生3','女');
+INSERT INTO student VALUES (STUDENT_SEQUENCE.nextval,'学生4','女');
+INSERT INTO student VALUES (STUDENT_SEQUENCE.nextval,'学生5','男');
+INSERT INTO student VALUES (STUDENT_SEQUENCE.nextval,'学生6','女');
+INSERT INTO student VALUES (STUDENT_SEQUENCE.nextval,'学生7','男');
+
+COMMIT ;
